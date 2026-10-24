@@ -9,14 +9,14 @@
                         <option value="{{ $c->category_id }}" @selected(request('category_id') == $c->category_id)>{{ $c->category }}</option>
                     @endforeach
                 </select>
-                <button class="px-4 py-2 rounded-lg bg-blue-700 text-white text-sm hover:bg-blue-800">Cari</button>
+                <button class="px-4 py-2 rounded-lg bg-brand-blue text-white text-sm hover:bg-brand-navy">Cari</button>
             </form>
-            <a href="{{ route('admin.products.create') }}" class="px-4 py-2 rounded-lg bg-blue-700 text-white text-sm text-center hover:bg-blue-800">+ Tambah Produk</a>
+            <a href="{{ route('admin.products.create') }}" class="px-4 py-2 rounded-lg bg-brand-blue text-white text-sm text-center hover:bg-brand-navy">+ Tambah Produk</a>
         </div>
 
         <div class="overflow-x-auto">
             <table class="w-full text-sm">
-                <thead class="bg-gray-50 text-left text-gray-600">
+                <thead class="bg-brand-navy text-left text-white">
                     <tr><th class="px-4 py-3">#</th><th class="px-4 py-3">Gambar</th><th class="px-4 py-3">Nama</th><th class="px-4 py-3">Kategori</th><th class="px-4 py-3">Harga</th><th class="px-4 py-3">Stok</th><th class="px-4 py-3 text-right">Aksi</th></tr>
                 </thead>
                 <tbody>

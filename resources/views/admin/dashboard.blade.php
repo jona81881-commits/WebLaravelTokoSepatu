@@ -1,7 +1,7 @@
 <x-admin-layout title="Dashboard">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
         @foreach ([['Produk', $stats['produk']], ['Kategori', $stats['kategori']], ['Pesanan', $stats['pesanan']], ['Stok menipis (≤5)', $stats['stok_menipis']]] as [$l, $v])
-            <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-blue-600">
+            <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-brand-blue">
                 <p class="text-sm text-gray-500">{{ $l }}</p>
                 <p class="text-3xl font-bold mt-1">{{ $v }}</p>
             </div>
@@ -16,7 +16,7 @@
     <div class="bg-white rounded-xl shadow-sm mt-6 overflow-x-auto">
         <div class="px-5 py-4 border-b font-semibold">Pesanan terbaru</div>
         <table class="w-full text-sm">
-            <thead class="bg-gray-50 text-left text-gray-600">
+            <thead class="bg-brand-navy text-left text-white">
                 <tr><th class="px-5 py-3">Kode</th><th class="px-5 py-3">Penerima</th><th class="px-5 py-3">Produk</th><th class="px-5 py-3">Total</th><th class="px-5 py-3">Status</th></tr>
             </thead>
             <tbody>

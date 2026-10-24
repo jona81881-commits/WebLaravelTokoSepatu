@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 // ---------- Halaman pelanggan (HomeLayout) ----------
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/katalog', [HomeController::class, 'katalog'])->name('katalog');
+Route::get('/katalog', [HomeController::class, 'index'])->name('katalog');
 Route::get('/produk/{product:slug}', [HomeController::class, 'detail'])->name('produk.detail');
 Route::get('/checkout/{product:slug}', [HomeController::class, 'checkout'])->name('checkout');
 Route::post('/pesan', [HomeController::class, 'pesan'])->name('pesan');

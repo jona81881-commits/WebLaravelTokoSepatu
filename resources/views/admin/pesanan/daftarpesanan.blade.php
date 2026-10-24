@@ -8,12 +8,12 @@
                     <option value="{{ $s }}" @selected(request('status') === $s)>{{ ucfirst($s) }}</option>
                 @endforeach
             </select>
-            <button class="px-4 py-2 rounded-lg bg-blue-700 text-white text-sm hover:bg-blue-800">Cari</button>
+            <button class="px-4 py-2 rounded-lg bg-brand-blue text-white text-sm hover:bg-brand-navy">Cari</button>
         </form>
 
         <div class="overflow-x-auto">
             <table class="w-full text-sm">
-                <thead class="bg-gray-50 text-left text-gray-600">
+                <thead class="bg-brand-navy text-left text-white">
                     <tr><th class="px-4 py-3">Kode</th><th class="px-4 py-3">Penerima</th><th class="px-4 py-3">Produk</th><th class="px-4 py-3">Jml</th><th class="px-4 py-3">Total</th><th class="px-4 py-3">Status</th></tr>
                 </thead>
                 <tbody>

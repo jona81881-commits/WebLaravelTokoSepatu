@@ -47,6 +47,6 @@
 </div>
 
 <div class="mt-6 flex gap-3">
-    <button class="px-6 py-2.5 rounded-lg bg-blue-700 text-white hover:bg-blue-800">Simpan</button>
+    <button class="px-6 py-2.5 rounded-lg bg-brand-blue text-white hover:bg-brand-navy">Simpan</button>
     <a href="{{ route('admin.products.index') }}" class="px-6 py-2.5 rounded-lg border hover:bg-gray-100">Batal</a>
 </div>

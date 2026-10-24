@@ -34,7 +34,7 @@ class ProductSeeder extends Seeder
         Storage::disk('public')->makeDirectory('products');
 
         foreach ($data as [$name, $price, $stock, $categoryId, $file, $description]) {
-            $sumber = database_path('seeders/images/'.$file);
+            $sumber = public_path('assets/images/'.$file);
             $img = null;
 
             // salin gambar ke storage/app/public/products

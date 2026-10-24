@@ -11,15 +11,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        $products = Product::with('category')->orderByDesc('product_id')->take(8)->get();
-        $categories = Category::withCount('products')->get();
-
-        return view('frontpage.landingpage', compact('products', 'categories'));
-    }
-
-    public function katalog(Request $request)
+    public function index(Request $request)
     {
         $products = Product::with('category')
             ->filter($request->only(['q', 'category_id', 'sort', 'in_stock', 'min_price', 'max_price']))
@@ -27,8 +19,11 @@ class HomeController extends Controller
             ->withQueryString();
 
         $categories = Category::orderBy('category')->get();
+        $activeCategory = $request->filled('category_id')
+            ? $categories->firstWhere('category_id', (int) $request->category_id)
+            : null;
 
-        return view('frontpage.katalog', compact('products', 'categories'));
+        return view('frontpage.landingpage', compact('products', 'categories', 'activeCategory'));
     }
 
     public function detail(Product $product)
