@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #283583;
+  --color-brand-blue: #4476db;
+  --color-brand-sky: #9acde0;
+  --color-brand-mist: #d3e8e6;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6fafa;
+  color: #283583;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
